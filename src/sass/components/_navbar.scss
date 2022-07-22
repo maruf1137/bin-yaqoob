@@ -1,0 +1,62 @@
+.nav {
+	padding: 3rem 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.516);
+
+	&__logo {
+		height: 4rem;
+		// width: 6.4rem;
+
+		img {
+			@include img-size;
+		}
+	}
+
+	&__list {
+		gap: 5.4rem;
+	}
+	&__link {
+		font-family: $font-secondary;
+		font-size: 1.8rem;
+		transition: all 0.3s;
+	}
+	&__link:hover,
+	.active {
+		color: $color-primary;
+	}
+
+	.nav__right {
+		gap: 2.5rem;
+
+		.contact {
+			.icon {
+				height: 1.5rem;
+				width: 1.5rem;
+				fill: $color-white;
+			}
+		}
+	}
+
+	.line {
+		height: 6.4rem;
+		width: 1px;
+		background-color: $color-white;
+	}
+
+	.mbl-bar {
+		background-color: transparent;
+		.icon {
+			height: 4.3rem;
+			width: 4.6rem;
+		}
+	}
+
+	.menu {
+		height: 2.4rem;
+		width: 2.4rem;
+		background-color: transparent;
+
+		.icon {
+			@include img-size;
+		}
+	}
+}

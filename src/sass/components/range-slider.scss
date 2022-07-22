@@ -1,0 +1,55 @@
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+.range-slider {
+	position: relative;
+	width: 100%;
+	height: 5px;
+	border-radius: 15px;
+	/*   background: transparent linear-gradient(90deg, #5f822d 0%, #a5af33 100%) 0% 0%
+    no-repeat padding-box; */
+	background: $color-white;
+	margin-top: 30px;
+}
+.range-slider .progress {
+	position: absolute;
+	left: 25%;
+	right: 0%;
+	height: 100%;
+	border-radius: 15px;
+	/*   background: transparent linear-gradient(90deg, #e4e7c1 0%, #d39892 100%) 0% 0%
+    no-repeat padding-box; */
+	background: $color-primary;
+}
+.range-slider input[type='range'] {
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	-webkit-appearance: none;
+	pointer-events: none;
+	background: none;
+	outline: none;
+}
+.range-slider .range-min::-webkit-slider-thumb {
+	pointer-events: auto;
+	-webkit-appearance: none;
+	width: 30px;
+	height: 30px;
+	background: black;
+	border: 6px solid $color-primary;
+	border-radius: 20px;
+	opacity: 1;
+	cursor: pointer;
+}
+.range-slider .range-max::-webkit-slider-thumb {
+	pointer-events: auto;
+	-webkit-appearance: none;
+	width: 30px;
+	height: 30px;
+	background: black;
+	border: 6px solid $color-primary;
+	border-radius: 20px;
+	opacity: 1;
+	cursor: pointer;
+}

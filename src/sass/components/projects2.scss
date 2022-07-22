@@ -1,0 +1,129 @@
+.projects-section2 {
+	padding: 8rem 0;
+}
+
+.projects2 {
+	&__item {
+	}
+
+	&__img {
+		width: 100%;
+		height: auto;
+		// position: absolute;
+
+		img {
+			@include img-size;
+		}
+	}
+
+	.btn-play {
+		position: absolute;
+		@include pos-center;
+		background-color: transparent;
+		height: 20rem;
+		width: 20rem;
+
+		img {
+			@include img-size;
+		}
+	}
+
+	.details {
+		padding: 0 0 0 8rem;
+
+		&__time {
+			// gap: 5rem;
+			.days {
+				height: 22rem;
+				width: 100%;
+
+				.points {
+					position: absolute;
+					@include pos-center;
+					font-size: 16.5rem;
+					color: $color-primary;
+					opacity: 0.2;
+				}
+
+				.title {
+					font-size: 1.8rem;
+					font-family: $font-primary;
+					letter-spacing: 1.2rem;
+					text-transform: uppercase;
+				}
+
+				// &:not(:last-child) {
+				// 	border-right: 1px solid rgba(255, 255, 255, 0.513);
+				// }
+			}
+			.line {
+				height: 22rem;
+				width: 1px;
+				background-color: rgba(255, 255, 255, 0.483);
+			}
+		}
+
+		.title {
+			font-size: 5rem;
+			font-weight: 700;
+			font-family: $font-secondary;
+			margin-bottom: 1.5rem;
+		}
+
+		.text {
+			color: $color-white;
+			font-size: 2rem;
+			font-family: $font-primary;
+			font-weight: 200;
+		}
+
+		.amenities {
+			margin-bottom: 5rem;
+			&__title {
+				font-size: 2.5rem;
+				font-weight: 300;
+				letter-spacing: 2rem;
+				text-transform: uppercase;
+			}
+			&__list {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				justify-content: center;
+				align-items: center;
+				gap: 4rem;
+				padding: 4rem 0;
+				border-top: 1px solid rgba(255, 255, 255, 0.526);
+				border-bottom: 1px solid rgba(255, 255, 255, 0.526);
+			}
+
+			&__img {
+				text-align: center;
+			}
+			&__name {
+				font-size: 1.8rem;
+				font-weight: 300;
+				letter-spacing: 0.5rem;
+				text-align: center;
+			}
+		}
+	}
+
+	.projects2__btns {
+		.btn {
+			background-color: $color-white;
+			color: $color-black;
+			transition: all 0.3s;
+
+			&:hover {
+				background-color: $color-black;
+				color: $color-white;
+			}
+		}
+
+		.line {
+			height: 5rem;
+			width: 1px;
+			background-color: #ffffff84;
+		}
+	}
+}

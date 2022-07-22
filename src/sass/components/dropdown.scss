@@ -1,0 +1,87 @@
+.select {
+	position: relative;
+	margin-bottom: 15px;
+	width: 100%;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.select .selectBtn {
+	// background: var(--bg1);
+	background-color: $color-black;
+	padding: 10px;
+	box-sizing: border-box;
+	border-radius: 3px;
+	width: 100%;
+	cursor: pointer;
+	position: relative;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	// background: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.507);
+	font-size: 1.6rem;
+}
+.select .selectBtn:after {
+	content: '';
+	position: absolute;
+	top: 45%;
+	right: 15px;
+	width: 6px;
+	height: 6px;
+	-webkit-transform: translateY(-50%) rotate(45deg);
+	transform: translateY(-50%) rotate(45deg);
+	border-right: 2px solid #666;
+	border-bottom: 2px solid #666;
+	transition: 0.2s ease;
+}
+.select .selectBtn.toggle {
+	border-radius: 3px 3px 0 0;
+}
+.select .selectBtn.toggle:after {
+	-webkit-transform: translateY(-50%) rotate(-135deg);
+	transform: translateY(-50%) rotate(-135deg);
+}
+.select .selectDropdown {
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	border-radius: 0 0 3px 3px;
+	overflow: hidden;
+	background: var(--bg1);
+	border: 1px solid rgba(238, 238, 238, 0.557);
+	z-index: 1;
+	background: $color-black;
+	-webkit-transform: scale(1, 0);
+	transform: scale(1, 0);
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+	visibility: hidden;
+	transition: 0.2s ease;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+.select .selectDropdown .option {
+	padding: 10px;
+	box-sizing: border-box;
+	cursor: pointer;
+	border-bottom: 1px solid transparent;
+	transition: all 0.3s;
+	font-size: 1.6rem;
+}
+.select .selectDropdown .option:hover {
+	border-bottom: 1px solid rgba(238, 238, 238, 0.557);
+}
+.select .selectDropdown.toggle {
+	visibility: visible;
+	-webkit-transform: scale(1, 1);
+	transform: scale(1, 1);
+}
+
+.sidebar-right {
+	.select .selectBtn,
+	.select .selectDropdown .option {
+		color: #707070;
+	}
+
+	.select .selectDropdown .option {
+	}
+}

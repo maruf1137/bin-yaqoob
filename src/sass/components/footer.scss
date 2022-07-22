@@ -1,0 +1,22 @@
+.footer {
+	padding: 4rem 0;
+
+	.cards {
+		&__list {
+			gap: 0.8rem;
+		}
+		&__link {
+			background-color: #a2aeb8;
+			padding: 0.6rem 1.4rem;
+		}
+	}
+	.social {
+		.cards__link {
+			background-color: transparent;
+			padding: 0.5rem;
+		}
+	}
+
+	.social {
+	}
+}

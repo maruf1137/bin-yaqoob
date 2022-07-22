@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+	text-transform: capitalize;
+}
+// ::selection {
+// 	background: $color-text;
+// 	color: #fff;
+// }
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+
+	// @media only screen and (max-width: $laptop-land) {
+	// 	font-size: 55%;
+	// }
+	// @media only screen and (max-width: $mbl-land) {
+	// 	font-size: 50%;
+	// }
+	// @media only screen and (max-width: $mbl-small) {
+	//   font-size: 45%;
+	// }
+}
+
+body {
+	font-family: $font-primary;
+	font-size: 2rem;
+	// line-height: 4rem;
+	color: $color-white;
+	overflow-x: hidden;
+	background-color: $color-black;
+}
+
+.main {
+	background-color: $color-white;
+}
+
+.custom-container {
+	max-width: 120rem;
+	margin: 0 auto;
+
+	@media only screen and (max-width: $laptop-land) {
+		padding: 0 2rem;
+	}
+}

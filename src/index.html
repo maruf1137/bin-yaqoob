@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>bin yaqoob | home</title>
+		<!-- bootstrap link -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="stylesheet" href="fonts/stylesheet.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<main>
+			<nav class="nav">
+				<div class="custom-container w-100 d-flex justify-content-between align-items-center">
+					<figure class="nav__logo">
+						<img src="img/logo.png" alt="logo" />
+					</figure>
+					<ul class="nav__list d-flex justify-content-center align-items-center">
+						<li class="nav__item">
+							<a class="nav__link active" href="#">home</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#">about us</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#">projects</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#">Journal</a>
+						</li>
+					</ul>
+					<div class="nav__right d-flex justify-content-center align-items-center">
+						<div class="login">
+							<button class="btn btn-login">login</button>
+							<button class="btn btn-logout d-none">logout</button>
+						</div>
+						<div class="line"></div>
+						<div class="contact d-flex flex-column align-items-start">
+							<div class="number d-flex justify-content-center align-items-center">
+								<svg class="icon mr-1">
+									<use xlink:href="img/icons.svg#icon-Icon-awesome-phone-alt"></use>
+								</svg>
+								<a class="number1" href="tel:0512720699">0512720699</a>
+								<span class="mx-2">-</span>
+								<a class="number1" href="tel:0512720723">0512720723</a>
+							</div>
+
+							<div class="number d-flex justify-content-center align-items-center">
+								<svg class="icon mr-1">
+									<use xlink:href="img/icons.svg#icon-Icon-zocial-email"></use>
+								</svg>
+								<a class="number1" href="binyaqoobbuilders@gmail.com"
+									>binyaqoobbuilders@gmail.com</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+
+			<div class="header d-flex align-items-stretch justify-content-between">
+				<div class="sidebar sidebar-left position-relative">
+					<div class="header__btn show-sidebar-btn btn-search">
+						<svg class="icon">
+							<use xlink:href="img/icons.svg#icon-Icon-ionic-ios-search"></use>
+						</svg>
+						<span class="mr-4">search</span>
+					</div>
+
+					<div class="container-wrapper">
+						<div class="nav d-flex align-items-center justify-content-center mb-2">
+							<svg class="icon mr-1">
+								<use xlink:href="img/icons.svg#icon-Icon-ionic-ios-search"></use>
+							</svg>
+							<span class="mr-4">search</span>
+						</div>
+						<!-- form -->
+						<form action="#" class="form">
+							<!-- search box -->
+							<div class="form__search d-flex justify-content-between align-items-center mb-2">
+								<input type="text" placeholder="20 Villas Project" />
+								<svg class="icon">
+									<use xlink:href="img/icons.svg#icon-Icon-ionic-ios-search"></use>
+								</svg>
+							</div>
+							<!-- search box end -->
+							<!-- filter -->
+							<div class="form__flter mb-2">
+								<h4 class="heading mb-1 white">filters</h4>
+								<!-- proparty status -->
+								<h5 class="heading mb-1">proparty status</h5>
+								<div
+									class="proparty-btns d-flex justify-content-between align-items-center mb-2 black"
+								>
+									<button class="btn btn-proparty">rant</button>
+									<button class="btn btn-proparty">sale</button>
+									<button class="btn btn-proparty">off plan</button>
+								</div>
+
+								<!-- proparty type -->
+								<h5 class="heading mb-1">proparty type</h5>
+								<div class="select white">
+									<div class="selectBtn" data-type="firstOption">Appartments</div>
+									<div class="selectDropdown">
+										<div class="option" data-type="firstOption">Appartments</div>
+										<div class="option" data-type="secondOption">Appartments 2</div>
+										<div class="option" data-type="thirdOption">Appartments 3</div>
+									</div>
+								</div>
+								<!-- developers -->
+								<h5 class="heading mb-1">developers</h5>
+								<div class="select white">
+									<div class="selectBtn" data-type="firstOption">GN Homes</div>
+									<div class="selectDropdown">
+										<div class="option" data-type="firstOption">GN Homes</div>
+										<div class="option" data-type="secondOption">GN Homes2</div>
+										<div class="option" data-type="thirdOption">GN Homes3</div>
+									</div>
+								</div>
+								<!-- ranges -->
+								<!-- price range -->
+								<h5 class="heading mb-1">Price Range</h5>
+								<div
+									class="flex relative justify-center items-center h-20 w-full mx-auto rounded mb-4"
+								>
+									<div class="min-value numberVal d-none">
+										<input type="number" class="" min="0" max="100" value="25" disabled />
+									</div>
+									<!--   &nbsp; -->
+									<div class="range-slider">
+										<div class="progress"></div>
+										<span class="range-min-wrapper">
+											<input class="range-min" type="range" min="0" max="100" value="25" />
+											<!-- <span class="range-min-value">0</span> -->
+										</span>
+										<span class="range-max-wrapper">
+											<input class="range-max" type="range" min="0" max="100" value="100" />
+											<!-- <span class="range-max-value">100</span> -->
+										</span>
+									</div>
+									<!--   &nbsp; -->
+									<div class="max-value numberVal d-none">
+										<input
+											type="number"
+											class="border text-center"
+											min="0"
+											max="100"
+											value="75"
+											disabled
+										/>
+									</div>
+								</div>
+
+								<h5 class="heading mb-1">Size (Sq.Ft)</h5>
+								<div
+									class="flex relative justify-center items-center h-20 w-full mx-auto rounded mb-4"
+								>
+									<div class="min-value numberVal d-none">
+										<input type="number" class="" min="0" max="100" value="25" disabled />
+									</div>
+									<!--   &nbsp; -->
+									<div class="range-slider">
+										<div class="progress"></div>
+										<span class="range-min-wrapper">
+											<input class="range-min" type="range" min="0" max="100" value="25" />
+											<!-- <span class="range-min-value">0</span> -->
+										</span>
+										<span class="range-max-wrapper">
+											<input class="range-max" type="range" min="0" max="100" value="100" />
+											<!-- <span class="range-max-value">100</span> -->
+										</span>
+									</div>
+									<!--   &nbsp; -->
+									<div class="max-value numberVal d-none">
+										<input
+											type="number"
+											class="border text-center"
+											min="0"
+											max="100"
+											value="75"
+											disabled
+										/>
+									</div>
+								</div>
+
+								<!-- size range -->
+								<!-- bedrooms -->
+								<h5 class="heading mb-1">bedrooms</h5>
+								<div class="select white">
+									<div class="selectBtn" data-type="firstOption">GN Homes</div>
+									<div class="selectDropdown">
+										<div class="option" data-type="firstOption">GN Homes</div>
+										<div class="option" data-type="secondOption">GN Homes2</div>
+										<div class="option" data-type="thirdOption">GN Homes3</div>
+									</div>
+								</div>
+							</div>
+							<!-- filter end -->
+							<div class="form__btns d-flex justify-content-between align-items-center">
+								<button class="btn-reset">reset</button>
+								<button class="btn btn-submit">search</button>
+							</div>
+						</form>
+						<!-- form end -->
+					</div>
+					<button class="close-sidebar">
+						<svg class="icon">
+							<use xlink:href="img/icons.svg#icon-Icon-ionic-ios-arrow-forward"></use>
+						</svg>
+					</button>
+				</div>
+
+				<div class="header__container header__video">
+					<div class="player">
+						<video class="player__video viewer" src="img/video/movie.mp4"></video>
+					</div>
+				</div>
+
+				<div class="sidebar sidebar-right position-relative">
+					<div class="header__btn show-sidebar-btn btn-search">
+						<span>Schedule a Meeting</span>
+					</div>
+					<div class="container-wrapper">
+						<div class="nav d-flex mb-2">
+							<h4 class="heading white center">ScHEdule a Meeting!</h4>
+						</div>
+						<!-- form -->
+						<form action="#" class="form">
+							<!--Schedule for -->
+							<h5 class="heading mb-1">Schedule for</h5>
+							<div class="select white">
+								<div class="selectBtn" data-type="firstOption">my self</div>
+								<div class="selectDropdown">
+									<div class="option" data-type="firstOption">My Self</div>
+									<div class="option" data-type="secondOption">self 2</div>
+									<div class="option" data-type="thirdOption">self 3</div>
+								</div>
+							</div>
+
+							<!-- Meeting Topic -->
+							<h5 class="heading mb-1">Meeting Topic</h5>
+							<textarea name="" placeholder="Topic......"></textarea>
+
+							<!-- meeting time -->
+							<div class="meeting row mb-2">
+								<div class="col-8">
+									<h5 class="heading mb-1">date</h5>
+									<div class="select white">
+										<div class="selectBtn" data-type="firstOption">Friday, Aug 2, 2022</div>
+										<div class="selectDropdown">
+											<div class="option" data-type="firstOption">Friday, Aug 2, 2022</div>
+											<div class="option" data-type="secondOption">Friday, Aug 3, 2022</div>
+											<div class="option" data-type="thirdOption">Friday, Aug 4, 2022</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-4">
+									<h5 class="heading mb-1">time</h5>
+									<div class="select white">
+										<div class="selectBtn" data-type="firstOption">08:15 am</div>
+										<div class="selectDropdown">
+											<div class="option" data-type="firstOption">08:15 am</div>
+											<div class="option" data-type="secondOption">09:15 am</div>
+											<div class="option" data-type="thirdOption">10:15 am</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<h5 class="heading mb-1">medium</h5>
+							<div class="select white">
+								<div class="selectBtn" data-type="firstOption">zoom</div>
+								<div class="selectDropdown">
+									<div class="option" data-type="firstOption">zoom</div>
+									<div class="option" data-type="secondOption">google meet</div>
+									<div class="option" data-type="thirdOption">google meet</div>
+								</div>
+							</div>
+
+							<h5 class="heading mb-1">Attendees</h5>
+							<div class="form__search mb-2">
+								<input
+									type="text"
+									placeholder="Separate email addresses with a comma or semicolon"
+								/>
+							</div>
+
+							<div class="form__btns d-flex justify-content-between align-items-center">
+								<button class="btn btn-submit">Schedule</button>
+								<button class="btn-reset">reset</button>
+							</div>
+						</form>
+						<!-- form end -->
+					</div>
+					<button class="close-sidebar">
+						<svg class="icon">
+							<use xlink:href="img/icons.svg#icon-Icon-ionic-ios-arrow-forward"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+
+			<section class="residence-section">
+				<div class="custom-container center mb-4">
+					<div class="title">
+						<h2 class="heading">Exclusive residence</h2>
+						<h6 class="heading uppercase">SALAM TOWER | FAISAL TOWN</h6>
+					</div>
+				</div>
+				<div class="custom-container">
+					<div class="residence">
+						<div class="residence__list row">
+							<div class="residence__item col-5 p-5">
+								<h3 class="heading mb-6">A luxury of living with our futuristic project.</h3>
+								<button class="btn btn-explore">explore</button>
+							</div>
+							<div class="residence__item col-7">
+								<figure class="residence__img">
+									<img src="img/sections/residence-img-1.jpg" alt="" />
+								</figure>
+							</div>
+						</div>
+						<div class="residence__list row align-items-start mt-15">
+							<div class="residence__item col-7">
+								<figure class="residence__img">
+									<img src="img/sections/residence-img-2.jpg" alt="" />
+								</figure>
+							</div>
+
+							<!-- accordion -->
+							<div class="residence__item col-5 p-5">
+								<div class="container mt-20">
+									<section class="accordion-wrapper" data-accordion>
+										<details>
+											<summary>
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons.svg#icon-plus"></use>
+												</svg>
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons.svg#icon-minus"></use>
+												</svg>
+												Floor Plan
+											</summary>
+											<div class="details-info">
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis
+													sodales erat vel accumsan. Nam eget massa nec.
+												</p>
+											</div>
+										</details>
+										<details>
+											<summary>
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons.svg#icon-plus"></use>
+												</svg>
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons.svg#icon-minus"></use>
+												</svg>
+												360 View
+											</summary>
+											<div class="details-info">
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis
+													sodales erat vel accumsan. Nam eget massa nec sem vulputate.
+												</p>
+											</div>
+										</details>
+										<details>
+											<summary>
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons.svg#icon-plus"></use>
+												</svg>
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons.svg#icon-minus"></use>
+												</svg>
+												Price Structure
+											</summary>
+											<div class="details-info">
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis
+													sodales erat vel accumsan. Nam eget massa nec sem vulputate.
+												</p>
+											</div>
+										</details>
+										<details>
+											<summary>
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons.svg#icon-plus"></use>
+												</svg>
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons.svg#icon-minus"></use>
+												</svg>
+												Call our Agent
+											</summary>
+											<div class="details-info">
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis
+													sodales erat vel accumsan. Nam eget massa nec sem vulputate.
+												</p>
+											</div>
+										</details>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- <div class="residence row">
+						
+					</div> -->
+				</div>
+
+				<div class="custom-container">
+					<div class="services row">
+						<div class="col-3 services__item">
+							<div class="point">516</div>
+							<div class="name">Resedential</div>
+						</div>
+						<div class="col-3 services__item">
+							<div class="point">02</div>
+							<div class="name">COMMERCIAL</div>
+						</div>
+						<div class="col-3 services__item">
+							<div class="point">12</div>
+							<div class="name">OFF PLAN</div>
+						</div>
+						<div class="col-3 services__item">
+							<div class="point">25</div>
+							<div class="name">LANDS</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="projects-section">
+				<div class="custom-container">
+					<div class="header d-flex justify-content-between align-items-center mb-3">
+						<h3 class="heading">Featured Projects</h3>
+						<div class="filter__btns">
+							<button class="btn-filter active">RESIDENTIAL</button>
+							<button class="btn-filter">COMMERCIAL</button>
+							<button class="btn-filter">OFF PLAN</button>
+						</div>
+					</div>
+
+					<div class="projects row gx-5">
+						<div class="col-4">
+							<div class="projects__item p-2">
+								<figure class="projects__img mb-2">
+									<img src="img/sections/project-img-1.png" alt="project 1" />
+								</figure>
+								<div class="details mb-2">
+									<div class="subtitle mb-1">Residential</div>
+									<h3 class="heading mb-1">salam tower apartments</h3>
+
+									<div class="address-wrapper d-flex justify-content-start align-items-center">
+										<div>
+											<div class="address">Faisal Town, Islamabad</div>
+											<div class="price">PKR 8,995,000</div>
+										</div>
+										<div class="line"></div>
+										<button class="btn btn-buy">buy</button>
+									</div>
+
+									<div class="features d-flex justify-content-between align-items-center">
+										<div class="d-flex align-items-center features__item">
+											<svg class="icon">
+												<use xlink:href="img/icons.svg#icon-Icon-awesome-bed"></use>
+											</svg>
+											<span>2 bedrooms</span>
+										</div>
+										<div class="d-flex align-items-center features__item">
+											<svg class="icon">
+												<use xlink:href="img/icons.svg#icon-Icon-awesome-bath-2"></use>
+											</svg>
+											<span>2 bathrooms</span>
+										</div>
+										<div class="d-flex align-items-center features__item">
+											<svg class="icon">
+												<use xlink:href="img/icons.svg#icon-Icon-awesome-expand-arrows-alt"></use>
+											</svg>
+											<span>1400 Sq.Ft</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-4">
+							<div class="projects__item p-2">
+								<figure class="projects__img mb-2">
+									<img src="img/sections/project-img-2.png" alt="project 1" />
+								</figure>
+								<div class="details mb-2">
+									<div class="subtitle mb-1">Residential</div>
+									<h3 class="heading mb-1">salam tower apartments</h3>
+
+									<div class="address-wrapper d-flex justify-content-start align-items-center">
+										<div>
+											<div class="address">Faisal Town, Islamabad</div>
+											<div class="price">PKR 8,995,000</div>
+										</div>
+										<div class="line"></div>
+										<button class="btn btn-buy">buy</button>
+									</div>
+
+									<div class="features d-flex justify-content-between align-items-center">
+										<div class="d-flex align-items-center features__item">
+											<svg class="icon">
+												<use xlink:href="img/icons.svg#icon-Icon-awesome-bed"></use>
+											</svg>
+											<span>2 bedrooms</span>
+										</div>
+										<div class="d-flex align-items-center features__item">
+											<svg class="icon">
+												<use xlink:href="img/icons.svg#icon-Icon-awesome-bath-2"></use>
+											</svg>
+											<span>2 bathrooms</span>
+										</div>
+										<div class="d-flex align-items-center features__item">
+											<svg class="icon">
+												<use xlink:href="img/icons.svg#icon-Icon-awesome-expand-arrows-alt"></use>
+											</svg>
+											<span>1400 Sq.Ft</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-4">
+							<div class="projects__item p-2">
+								<figure class="projects__img mb-2">
+									<img src="img/sections/project-img-3.png" alt="project 1" />
+								</figure>
+								<div class="details mb-2">
+									<div class="subtitle mb-1">Residential</div>
+									<h3 class="heading mb-1">salam tower apartments</h3>
+
+									<div class="address-wrapper d-flex justify-content-start align-items-center">
+										<div>
+											<div class="address">Faisal Town, Islamabad</div>
+											<div class="price">PKR 8,995,000</div>
+										</div>
+										<div class="line"></div>
+										<button class="btn btn-buy">buy</button>
+									</div>
+
+									<div class="features d-flex justify-content-between align-items-center">
+										<div class="d-flex align-items-center features__item">
+											<svg class="icon">
+												<use xlink:href="img/icons.svg#icon-Icon-awesome-bed"></use>
+											</svg>
+											<span>2 bedrooms</span>
+										</div>
+										<div class="d-flex align-items-center features__item">
+											<svg class="icon">
+												<use xlink:href="img/icons.svg#icon-Icon-awesome-bath-2"></use>
+											</svg>
+											<span>2 bathrooms</span>
+										</div>
+										<div class="d-flex align-items-center features__item">
+											<svg class="icon">
+												<use xlink:href="img/icons.svg#icon-Icon-awesome-expand-arrows-alt"></use>
+											</svg>
+											<span>1400 Sq.Ft</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="custom-container text-end">
+					<button class="projects-btn">
+						<svg class="icon icon-chevrons-right">
+							<use xlink:href="img/icons.svg#icon-chevrons-right"></use>
+						</svg>
+						<span>see all</span>
+					</button>
+				</div>
+			</section>
+
+			<section class="projects-section2">
+				<div class="custom-container">
+					<div class="title center mb-4">
+						<h2 class="heading">Approaching Projects</h2>
+						<h6 class="heading uppercase">IMMINENT LUXURY TO YOU</h6>
+					</div>
+				</div>
+
+				<div class="custom-container">
+					<div class="projects2 row align-items-center">
+						<div class="col-6 projects2__item position-relative">
+							<figure class="projects2__img">
+								<img src="img/sections/projects2-img.png" alt="" />
+							</figure>
+							<button class="btn-play">
+								<img src="img/video-button.png" alt="" />
+								<!-- <svg class="icon">
+									<use xlink:href="img/icons.svg#icon-Video-Button"></use>
+								</svg> -->
+							</button>
+						</div>
+						<div class="col-6 projects2__item">
+							<div class="details">
+								<div class="details__time d-flex justify-content-between align-items-center mb-3">
+									<div
+										class="days position-relative d-flex justify-content-center align-items-center text-center mr-4"
+									>
+										<div class="points">365</div>
+										<div class="title">days</div>
+									</div>
+									<div class="line"></div>
+									<div
+										class="days position-relative d-flex justify-content-center align-items-center text-center"
+									>
+										<div class="points">05</div>
+										<div class="title">hour</div>
+									</div>
+								</div>
+
+								<div class="title mb-2">Salam Tower ii</div>
+								<p class="text mb-2">
+									At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+									praesentium voluptatum deleniti atque corrupti quos dolores et quas.
+								</p>
+								<div class="amenities">
+									<h4 class="amenities__title mb-5">Amenities</h4>
+									<div class="amenities__list">
+										<div class="amenities__item">
+											<figure class="amenities__img">
+												<img src="img/sections/amenities-img-1.png" alt="" />
+											</figure>
+											<div class="amenities__name">Swimming Pool</div>
+										</div>
+										<div class="amenities__item">
+											<figure class="amenities__img">
+												<img src="img/sections/amenities-img-2.png" alt="" />
+											</figure>
+											<div class="amenities__name">Parks</div>
+										</div>
+										<div class="amenities__item">
+											<figure class="amenities__img">
+												<img src="img/sections/amenities-img-3.png" alt="" />
+											</figure>
+											<div class="amenities__name">School</div>
+										</div>
+										<div class="amenities__item">
+											<figure class="amenities__img">
+												<img src="img/sections/amenities-img-4.png" alt="" />
+											</figure>
+											<div class="amenities__name">cafe</div>
+										</div>
+										<div class="amenities__item">
+											<figure class="amenities__img">
+												<img src="img/sections/amenities-img-5.png" alt="" />
+											</figure>
+											<div class="amenities__name">parking</div>
+										</div>
+										<div class="amenities__item">
+											<figure class="amenities__img">
+												<img src="img/sections/amenities-img-6.png" alt="" />
+											</figure>
+											<div class="amenities__name">banks</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="projects2__btns d-flex justify-content-between align-items-center">
+									<button class="btn btn-explore">explore</button>
+									<div class="line"></div>
+									<button class="btn btn-download">Download Brochure</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- JavaScript Bundle with Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+			crossorigin="anonymous"
+		></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script> -->
+		<script src="js/main.js"></script>
+	</body>
+</html>

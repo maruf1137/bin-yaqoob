@@ -1,0 +1,132 @@
+.projects-section {
+	padding: 8rem 0;
+
+	.header {
+		h3 {
+			font-size: 3rem;
+			font-weight: 700;
+			letter-spacing: 1rem;
+			color: $color-white;
+		}
+
+		.filter__btns {
+			background-color: $color-black;
+			border: 1px solid #707070;
+			border-radius: 0.6rem;
+
+			.btn-filter {
+				border: none;
+				background-color: transparent;
+				color: $color-white;
+				padding: 0.7rem 1.7rem;
+				transition: all 0.3s;
+
+				&:not(:last-child) {
+					border-right: 1px solid #707070bd;
+				}
+
+				.active,
+				&:hover {
+					background-color: $color-white;
+					color: $color-black;
+				}
+			}
+		}
+	}
+
+	.projects {
+		&__item {
+			padding: 2rem;
+			border: 1px solid rgba(255, 255, 255, 0.528);
+			// margin-right: 2rem;
+		}
+
+		&__img {
+			height: 36rem;
+			width: 100%;
+
+			img {
+				@include img-size;
+			}
+		}
+
+		.details {
+			.subtitle {
+				font-size: 1.2rem;
+				font-weight: 300;
+				letter-spacing: 0.5rem;
+				text-transform: uppercase;
+			}
+
+			h3 {
+				font-size: 2.5rem;
+				font-weight: 700;
+				color: $color-white;
+				text-transform: uppercase;
+				line-height: 4rem;
+			}
+
+			.address-wrapper {
+				gap: 4rem;
+				margin-bottom: 2rem;
+			}
+
+			.address {
+				font-size: 1.2rem;
+				font-weight: 200;
+			}
+			.price {
+				font-size: 1.8rem;
+				color: $color-primary;
+			}
+			.line {
+				height: 3.5rem;
+				background-color: rgba(255, 255, 255, 0.535);
+				width: 1px;
+			}
+			.btn-buy {
+				background-color: $color-white;
+				color: $color-black;
+				transition: all 0.3s;
+				padding: 1rem 5rem;
+
+				&:hover {
+					background-color: $color-black;
+					color: $color-white;
+				}
+			}
+			.features {
+				.icon {
+					height: 1.6rem;
+					width: 1.6rem;
+					margin-right: 1.5rem;
+				}
+
+				span {
+					font-size: 1.2rem;
+					font-weight: 200;
+				}
+			}
+		}
+	}
+}
+
+.projects-btn {
+	// margin-left: auto;
+	background-color: transparent;
+	color: $color-white;
+	margin-top: 3rem;
+
+	.icon {
+		margin-right: 0;
+		height: 1.7rem;
+		width: 1.7rem;
+		fill: $color-white;
+	}
+
+	span {
+		font-size: 1.8rem;
+		text-transform: capitalize;
+		font-weight: 200;
+	}
+}
