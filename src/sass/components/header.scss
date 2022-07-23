@@ -6,6 +6,13 @@
 		width: 100%;
 		max-height: 100vh;
 		height: 100%;
+
+		@media only screen and (max-width: $tab-land) {
+			position: absolute;
+			top: 10rem;
+			left: 0;
+			z-index: 5;
+		}
 	}
 
 	.icon {

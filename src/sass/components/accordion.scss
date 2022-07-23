@@ -21,12 +21,6 @@ details {
 	font-family: $font-secondary;
 }
 
-// .open
-
-// details:not(:first-child) {
-// 	border-top: 1px solid var(--collapse-line-color);
-// }
-
 summary {
 	// display: grid;
 	// grid-template-columns: 1fr auto;
@@ -82,11 +76,11 @@ details[open] summary {
 	border-bottom: 1px solid $color-primary;
 }
 
-.container {
-	max-width: var(--container-width);
-	margin: 0 auto;
-	padding: 20px;
-}
+// .container {
+// 	max-width: var(--container-width);
+// 	margin: 0 auto;
+// 	padding: 20px;
+// }
 
 .icon {
 	// display: inline-block;

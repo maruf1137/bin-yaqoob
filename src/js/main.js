@@ -77,7 +77,9 @@ range.forEach((input) => {
 				range[1].value = minRange + gap;
 			}
 		} else {
+			console.log(minRange);
 			progress.style.left = (minRange / range[0].max) * 100 + '%';
+			// progress.style.left = 0 + '%';
 			progress.style.right = 100 - (maxRange / range[1].max) * 100 + '%';
 
 			inputValue[0].innerHTML = minRange;

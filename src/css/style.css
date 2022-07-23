@@ -43,6 +43,17 @@ body {
   }
 }
 
+section,
+.footer {
+  padding: 8rem 0 !important;
+}
+@media only screen and (max-width: 62em) {
+  section,
+.footer {
+    padding: 4rem 0 !important;
+  }
+}
+
 h1.heading {
   font-weight: 700;
   font-size: 12rem;
@@ -128,6 +139,16 @@ h5 {
   font-weight: 200;
   font-family: "Titillium Web", sans-serif;
   text-transform: capitalize;
+}
+@media only screen and (max-width: 62em) {
+  .text {
+    font-size: 1.6rem;
+  }
+}
+@media only screen and (max-width: 23.75em) {
+  .text {
+    line-height: 1.2rem;
+  }
 }
 
 a:link,
@@ -1379,6 +1400,8 @@ button {
   height: 100%;
   transition: all 0.3s;
   transform: translateX(-100%);
+  z-index: 6;
+  background-color: #000;
 }
 .sidebar .container-wrapper {
   padding: 3rem 4rem;
@@ -1470,7 +1493,12 @@ button {
   transform: translateX(-2px);
 }
 .sidebar-left .close-sidebar {
-  right: 0;
+  right: -3rem;
+}
+@media only screen and (max-width: 62em) {
+  .sidebar-left .close-sidebar {
+    right: 0;
+  }
 }
 
 .sidebar-right {
@@ -1478,7 +1506,12 @@ button {
   transform: translateX(2px);
 }
 .sidebar-right .close-sidebar {
-  left: 0;
+  left: -3rem;
+}
+@media only screen and (max-width: 62em) {
+  .sidebar-right .close-sidebar {
+    left: 0;
+  }
 }
 .sidebar-right textarea {
   width: 100%;
@@ -1510,9 +1543,6 @@ button {
   display: block;
 }
 
-.footer {
-  padding: 10rem 0;
-}
 .footer__logo {
   width: 26rem;
   height: auto;
@@ -1569,6 +1599,14 @@ button {
   width: 100%;
   max-height: 100vh;
   height: 100%;
+}
+@media only screen and (max-width: 62em) {
+  .header__container {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    z-index: 5;
+  }
 }
 .header .icon {
   height: 1.5rem;
@@ -1721,7 +1759,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .range-slider .progress {
   position: absolute;
-  left: 25%;
+  left: 0;
   right: 0%;
   height: 100%;
   border-radius: 1.5rem;
@@ -2026,7 +2064,6 @@ div[slider] > input[type=range]::-ms-tooltip {
 
 .services {
   padding-top: 8rem;
-  gap: 5rem;
 }
 @media only screen and (max-width: 62em) {
   .services {
@@ -2139,12 +2176,6 @@ details[open] summary {
   border-bottom: 1px solid #c49e55;
 }
 
-.container {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 20px;
-}
-
 .icon {
   height: 1.5rem;
   width: 1.5rem;
@@ -2163,9 +2194,6 @@ details[open] summary {
   100% {
     opacity: 1;
   }
-}
-.projects-section {
-  padding: 8rem 0;
 }
 .projects-section .header h3 {
   font-size: 3rem;
@@ -2291,10 +2319,6 @@ details[open] summary {
   font-size: 1.8rem;
   text-transform: capitalize;
   font-weight: 200;
-}
-
-.projects-section2 {
-  padding: 8rem 0;
 }
 
 .projects2__img {
@@ -2454,10 +2478,6 @@ details[open] summary {
   background-color: #ffffff84;
 }
 
-.pillar-section {
-  padding: 8rem 0;
-}
-
 .pillar__item {
   border: 1px solid rgba(238, 238, 238, 0.188);
   padding: 4.4rem 4.8rem;
@@ -2487,9 +2507,6 @@ details[open] summary {
   font-weight: 200;
 }
 
-.acquire-section {
-  padding: 8rem 0;
-}
 .acquire-section .custom-container {
   max-width: 179rem;
 }
@@ -2543,9 +2560,6 @@ details[open] summary {
   color: #fff;
 }
 
-.realestate-section {
-  padding: 8rem 0;
-}
 .realestate-section .realestate {
   gap: 4rem;
 }
@@ -2596,9 +2610,6 @@ details[open] summary {
   color: #000;
 }
 
-.partnar-section {
-  padding: 8rem 0;
-}
 .partnar-section .partnar {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
@@ -2617,9 +2628,6 @@ details[open] summary {
   width: 100%;
 }
 
-.contact-section {
-  padding: 8rem 0;
-}
 .contact-section .row {
   border-top: 1px solid rgba(255, 255, 255, 0.255);
 }
@@ -2817,7 +2825,7 @@ details[open] summary {
 }
 
 .gallery-section {
-  padding: 1rem 0;
+  padding: 1rem 0 !important;
 }
 .gallery-section .gallery {
   display: grid;
@@ -2868,6 +2876,7 @@ details[open] summary {
   width: 100%;
   overflow: hidden;
   position: relative;
+  padding: 0 !important;
 }
 .map-section .map__img {
   height: 100%;

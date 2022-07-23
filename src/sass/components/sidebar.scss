@@ -1,10 +1,10 @@
 .sidebar {
-	// background-color: red;
-	// max-width: 50rem;
 	width: 7rem;
 	height: 100%;
 	transition: all 0.3s;
 	transform: translateX(-100%);
+	z-index: 6;
+	background-color: $color-black;
 
 	.container-wrapper {
 		padding: 3rem 4rem;
@@ -117,7 +117,11 @@
 	transform: translateX(-2px);
 
 	.close-sidebar {
-		right: 0;
+		right: -3rem;
+
+		@media only screen and (max-width: $tab-land) {
+			right: 0;
+		}
 	}
 }
 .sidebar-right {
@@ -125,7 +129,10 @@
 	transform: translateX(2px);
 
 	.close-sidebar {
-		left: 0;
+		left: -3rem;
+		@media only screen and (max-width: $tab-land) {
+			left: 0;
+		}
 	}
 
 	textarea {

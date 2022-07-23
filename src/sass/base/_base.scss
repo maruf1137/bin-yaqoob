@@ -22,13 +22,6 @@ html {
 	@media only screen and (max-width: $laptop-land) {
 		font-size: 55%;
 	}
-
-	// @media only screen and (max-width: $mbl-land) {
-	// 	font-size: 50%;
-	// }
-	// @media only screen and (max-width: $mbl-small) {
-	//   font-size: 45%;
-	// }
 }
 
 body {
@@ -50,5 +43,14 @@ body {
 
 	@media only screen and (max-width: 93.75em) {
 		padding: 0 2rem;
+	}
+}
+
+section,
+.footer {
+	padding: 8rem 0 !important;
+
+	@media only screen and (max-width: $tab-land) {
+		padding: 4rem 0 !important;
 	}
 }

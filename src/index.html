@@ -122,7 +122,7 @@
 
 			<!-- header section -->
 			<div class="header d-flex align-items-stretch justify-content-between">
-				<div class="sidebar sidebar-left position-relative tablet-land-hide">
+				<div class="sidebar sidebar-left position-relative">
 					<div class="header__btn show-sidebar-btn btn-search">
 						<svg class="icon">
 							<use xlink:href="img/icons.svg#icon-Icon-ionic-ios-search"></use>
@@ -183,12 +183,11 @@
 								<!-- ranges -->
 								<!-- price range -->
 								<h5 class="heading mb-1">Price Range</h5>
-								<div
+								<!-- <div
 									class="flex relative justify-center items-center h-20 w-full mx-auto rounded mb-4 position-relative mb-8"
 								>
 									<div class="min-value numberVal d-flex align-items-center value">
 										<span>PKR</span>
-										<!-- <input type="number" min="0" max="100" value="25" disabled /> -->
 										<div class="input">20</div>
 										<span>lakh</span>
 									</div>
@@ -196,24 +195,21 @@
 										<div class="progress"></div>
 										<span class="range-min-wrapper">
 											<input class="range-min" type="range" min="0" max="100" value="25" />
-											<!-- <span class="range-min-value">0</span> -->
 										</span>
 										<span class="range-max-wrapper">
 											<input class="range-max" type="range" min="0" max="100" value="100" />
-											<!-- <span class="range-max-value">100</span> -->
 										</span>
 									</div>
 									<div class="max-value numberVal d-flex align-items-center value">
 										<span>PKR</span>
-										<!-- <input type="number" min="0" max="100" value="75" disabled /> -->
 										<div class="input">20</div>
 										<span>lakh</span>
 									</div>
-								</div>
+								</div> -->
 
 								<!-- size range -->
 								<h5 class="heading mb-1">Size (Sq.Ft)</h5>
-								<!-- <div
+								<div
 									class="flex relative justify-center items-center h-20 w-full mx-auto rounded mb-4 position-relative mb-8"
 								>
 									<div class="min-value numberVal d-flex align-items-center value">
@@ -223,65 +219,17 @@
 									<div class="range-slider">
 										<div class="progress"></div>
 										<span class="range-min-wrapper">
-											<input class="range-min" type="range" min="0" max="100" value="25" />
+											<input class="range-min" type="range" min="200" max="15000" value="200" />
 										</span>
 										<span class="range-max-wrapper">
-											<input class="range-max" type="range" min="0" max="100" value="100" />
+											<input class="range-max" type="range" min="200" max="15000" value="15000" />
 										</span>
 									</div>
 									<div class="max-value numberVal d-flex align-items-center value">
 										<span>Max</span>
 										<div class="input">15,000+</div>
 									</div>
-								</div> -->
-
-								<!-- <div slider id="slider-distance">
-									<div>
-										<div inverse-left style="width: 70%"></div>
-										<div inverse-right style="width: 70%"></div>
-										<div range style="left: 30%; right: 40%"></div>
-										<span thumb style="left: 30%"></span>
-										<span thumb style="left: 60%"></span>
-										<div sign style="left: 30%">
-											<span id="value">min 200</span>
-										</div>
-										<div sign style="left: 60%">
-											<span id="value">Max 15,000+</span>
-										</div>
-									</div>
-									<input
-										type="range"
-										tabindex="0"
-										value="30"
-										max="100"
-										min="0"
-										step="1"
-										oninput="
-  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
-  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-  var children = this.parentNode.childNodes[1].childNodes;
-  children[1].style.width=value+'%';
-  children[5].style.left=value+'%';
-  children[7].style.left=value+'%';children[11].style.left=value+'%';
-  children[11].childNodes[1].innerHTML=this.value;"
-									/>
-									<input
-										type="range"
-										tabindex="0"
-										value="60"
-										max="100"
-										min="0"
-										step="1"
-										oninput="
-  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
-  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
-  var children = this.parentNode.childNodes[1].childNodes;
-  children[3].style.width=(100-value)+'%';
-  children[5].style.right=(100-value)+'%';
-  children[9].style.left=value+'%';children[13].style.left=value+'%';
-  children[13].childNodes[1].innerHTML=this.value;"
-									/>
-								</div> -->
+								</div>
 
 								<!-- bedrooms -->
 								<h5 class="heading mb-1">bedrooms</h5>
@@ -315,7 +263,7 @@
 					</div>
 				</div>
 
-				<div class="sidebar sidebar-right position-relative tablet-land-hide">
+				<div class="sidebar sidebar-right position-relative">
 					<div class="header__btn show-sidebar-btn btn-search">
 						<span>Schedule a Meeting</span>
 					</div>
@@ -612,21 +560,30 @@
 
 				<div class="custom-container">
 					<div class="services row">
-						<div class="col services__item">
-							<div class="point">516</div>
-							<div class="name">Resedential</div>
+						<div class="col-12 col-sm-6 col-md-3">
+							<div class="services__item">
+								<div class="point">516</div>
+								<div class="name">Resedential</div>
+							</div>
 						</div>
-						<div class="col services__item">
-							<div class="point">02</div>
-							<div class="name">COMMERCIAL</div>
+						<div class="col-12 col-sm-6 col-md-3">
+							<div class="services__item">
+								<div class="point">02</div>
+								<div class="name">COMMERCIAL</div>
+							</div>
 						</div>
-						<div class="col services__item">
-							<div class="point">12</div>
-							<div class="name">OFF PLAN</div>
+
+						<div class="col-12 col-sm-6 col-md-3">
+							<div class="services__item">
+								<div class="point">12</div>
+								<div class="name">OFF PLAN</div>
+							</div>
 						</div>
-						<div class="col services__item">
-							<div class="point">25</div>
-							<div class="name">LANDS</div>
+						<div class="col-12 col-sm-6 col-md-3">
+							<div class="services__item">
+								<div class="point">25</div>
+								<div class="name">LANDS</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -653,8 +610,8 @@
 						</div>
 					</div>
 
-					<div class="projects row gx-5">
-						<div class="col">
+					<div class="projects row g-5">
+						<div class="col-12 col-md-6 col-lg-4">
 							<div class="projects__item p-2">
 								<figure class="projects__img mb-2">
 									<img src="img/sections/project-img-1.png" alt="project 1" />
@@ -707,7 +664,7 @@
 							</div>
 						</div>
 
-						<div class="col">
+						<div class="col-12 col-md-6 col-lg-4">
 							<div class="projects__item p-2">
 								<figure class="projects__img mb-2">
 									<img src="img/sections/project-img-2.png" alt="project 1" />
@@ -760,7 +717,7 @@
 							</div>
 						</div>
 
-						<div class="col">
+						<div class="col-12 col-md-6 col-lg-4">
 							<div class="projects__item p-2">
 								<figure class="projects__img mb-2">
 									<img src="img/sections/project-img-3.png" alt="project 1" />
