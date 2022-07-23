@@ -59,11 +59,11 @@ option.forEach((a) => {
 	});
 });
 
-// range slider
-const range = document.querySelectorAll('.range-slider span input');
-progress = document.querySelector('.range-slider .progress');
+// range slider 1
+const range = document.querySelectorAll('.range-slider1 span input');
+progress = document.querySelector('.range-slider1 .progress');
 let gap = 0.1;
-const inputValue = document.querySelectorAll('.numberVal .input');
+const inputValue = document.querySelectorAll('.numberVal1 .input');
 
 range.forEach((input) => {
 	input.addEventListener('input', (e) => {
@@ -77,13 +77,41 @@ range.forEach((input) => {
 				range[1].value = minRange + gap;
 			}
 		} else {
-			console.log(minRange);
 			progress.style.left = (minRange / range[0].max) * 100 + '%';
 			// progress.style.left = 0 + '%';
 			progress.style.right = 100 - (maxRange / range[1].max) * 100 + '%';
 
 			inputValue[0].innerHTML = minRange;
 			inputValue[1].innerHTML = maxRange;
+		}
+	});
+});
+
+// range slider 2
+const range2 = document.querySelectorAll('.range-slider2 span input');
+progress2 = document.querySelector('.range-slider2 .progress');
+let gap2 = 0.1;
+const inputValue2 = document.querySelectorAll('.numberVal2 .input');
+
+// console.log(inputValue2);
+
+range2.forEach((input) => {
+	input.addEventListener('input', (e) => {
+		let minRange = parseInt(range2[0].value);
+		let maxRange = parseInt(range2[1].value);
+
+		if (maxRange - minRange < gap2) {
+			if (e.target.className === 'range-min') {
+				range2[0].value = maxRange - gap2;
+			} else {
+				range2[1].value = minRange + gap2;
+			}
+		} else {
+			progress2.style.left = (minRange / range2[0].max) * 100 + '%';
+			progress2.style.right = 100 - (maxRange / range2[1].max) * 100 + '%';
+
+			inputValue2[0].innerHTML = minRange;
+			inputValue2[1].innerHTML = maxRange;
 		}
 	});
 });

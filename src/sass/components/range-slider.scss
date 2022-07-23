@@ -22,6 +22,11 @@ input[type='number']::-webkit-outer-spin-button {
     no-repeat padding-box; */
 	background: $color-primary;
 }
+
+.range-slider2 .progress2 {
+	left: 25%;
+}
+
 .range-slider input[type='range'] {
 	position: absolute;
 	width: 100%;
