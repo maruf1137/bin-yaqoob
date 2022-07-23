@@ -7,6 +7,11 @@
 			font-weight: 700;
 			letter-spacing: 1rem;
 			color: $color-white;
+
+			@media only screen and (max-width: $mbl-land) {
+				font-size: 2rem;
+				letter-spacing: 0.5rem;
+			}
 		}
 
 		.filter__btns {
@@ -32,6 +37,10 @@
 				}
 			}
 		}
+
+		.select {
+			max-width: 20rem;
+		}
 	}
 
 	.projects {
@@ -44,9 +53,17 @@
 		&__img {
 			height: 36rem;
 			width: 100%;
+			overflow: hidden;
 
 			img {
 				@include img-size;
+				transition: all 0.5s;
+			}
+
+			&:hover {
+				img {
+					// transform: scale(1.1);
+				}
 			}
 		}
 
@@ -56,6 +73,11 @@
 				font-weight: 300;
 				letter-spacing: 0.5rem;
 				text-transform: uppercase;
+
+				@media only screen and (max-width: $mbl-land) {
+					font-size: 0.8rem;
+					letter-spacing: 0.2rem;
+				}
 			}
 
 			h3 {
@@ -64,6 +86,10 @@
 				color: $color-white;
 				text-transform: uppercase;
 				line-height: 4rem;
+
+				@media only screen and (max-width: $mbl-land) {
+					font-size: 1.5rem;
+				}
 			}
 
 			.address-wrapper {

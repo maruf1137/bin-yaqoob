@@ -1,0 +1,63 @@
+.acquire-section {
+	padding: 8rem 0;
+
+	.custom-container {
+		max-width: 179rem;
+	}
+
+	.acquire {
+		padding: 13.4rem 0;
+		text-align: center;
+		// border: 1px solid red;
+		background-image: linear-gradient(
+				rgb(0, 0, 0),
+				rgba(0, 0, 0, 0.871),
+				rgba(0, 0, 0, 0.709),
+				rgba(0, 0, 0, 0.539)
+			),
+			url('../img/B&W.png');
+
+		&__title {
+			font-size: 6rem;
+			font-weight: 400;
+			color: $color-white;
+			font-family: $font-secondary;
+			max-width: 123rem;
+			margin: 0 auto;
+
+			@media only screen and (max-width: $tab-land) {
+				font-size: 4.5rem;
+			}
+			@media only screen and (max-width: $mbl-land) {
+				font-size: 3rem;
+			}
+			@media only screen and (max-width: $mbl-small) {
+				font-size: 2rem;
+			}
+		}
+
+		.line {
+			height: 1px;
+			max-width: 65.6rem;
+			width: 65rem;
+			background-color: #ffffff66;
+			margin: 0 auto;
+		}
+		&__btns {
+			gap: 1.5rem;
+
+			.btn {
+				border: 1px solid $color-white;
+				background-color: $color-white;
+				color: $color-black;
+				transition: all 0.3s;
+				width: 25rem;
+
+				&:hover {
+					background-color: $color-black;
+					color: $color-white;
+				}
+			}
+		}
+	}
+}

@@ -10,7 +10,7 @@
 		padding: 3rem 4rem;
 		display: none;
 
-		.nav {
+		.sidebar-nav {
 			padding: 0;
 			border-bottom: none;
 
@@ -126,6 +126,21 @@
 
 	.close-sidebar {
 		left: 0;
+	}
+
+	textarea {
+		width: 100%;
+		background-color: transparent;
+
+		padding: 1rem;
+		color: rgba(255, 255, 255, 0.516);
+		font-size: 2rem;
+		font-weight: 400;
+		border: 1px solid rgba(255, 255, 255, 0.516);
+
+		&::placeholder {
+			color: rgba(255, 255, 255, 0.516);
+		}
 	}
 }
 

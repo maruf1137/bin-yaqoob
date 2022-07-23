@@ -1,10 +1,16 @@
 .nav {
 	padding: 3rem 0;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.516);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 8;
+	background: black;
 
 	&__logo {
 		height: 4rem;
-		// width: 6.4rem;
+		min-width: 17rem;
 
 		img {
 			@include img-size;
@@ -13,6 +19,10 @@
 
 	&__list {
 		gap: 5.4rem;
+
+		@media only screen and (max-width: $tab-land) {
+			display: none !important;
+		}
 	}
 	&__link {
 		font-family: $font-secondary;
@@ -34,6 +44,10 @@
 				fill: $color-white;
 			}
 		}
+
+		@media only screen and (max-width: $tab-land) {
+			display: none !important;
+		}
 	}
 
 	.line {
@@ -41,22 +55,69 @@
 		width: 1px;
 		background-color: $color-white;
 	}
+}
 
-	.mbl-bar {
-		background-color: transparent;
-		.icon {
-			height: 4.3rem;
-			width: 4.6rem;
+.btn-sidebar {
+	.icon {
+		height: 3.5rem;
+		width: 3.5rem;
+		fill: $color-white;
+	}
+}
+
+.btn-open-sidebar {
+	position: fixed;
+	top: 3.5rem;
+	right: 1rem;
+	display: none;
+	background-color: transparent;
+
+	@media only screen and (max-width: $tab-land) {
+		display: block;
+	}
+}
+
+.btn-close-sidebar {
+	position: absolute;
+	top: 3.5rem;
+	right: 1rem;
+	background-color: transparent;
+}
+
+.mbl-bar {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 60%;
+	background-color: #000;
+	z-index: 10;
+	padding-top: 8rem;
+	transform: translateX(-100%);
+	transition: all 0.5s;
+
+	@media only screen and (max-width: $mbl-land) {
+		width: 100%;
+	}
+
+	.nav__list {
+		display: none !important;
+		gap: 2.4rem;
+
+		@media only screen and (max-width: $tab-land) {
+			display: flex !important;
 		}
 	}
 
-	.menu {
-		height: 2.4rem;
-		width: 2.4rem;
-		background-color: transparent;
+	.nav__right {
+		display: none !important;
 
-		.icon {
-			@include img-size;
+		@media only screen and (max-width: $tab-land) {
+			display: flex !important;
 		}
 	}
+}
+
+.show-mbl-bar {
+	transform: translateX(0);
 }

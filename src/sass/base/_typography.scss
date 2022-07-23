@@ -15,6 +15,11 @@ h2.heading {
 	font-weight: 400;
 	font-size: 6rem;
 	line-height: 8rem;
+
+	@media only screen and (max-width: $tab-land) {
+		font-size: 4rem;
+		line-height: 6rem;
+	}
 }
 
 h3.heading {
@@ -22,20 +27,25 @@ h3.heading {
 	line-height: 5.4rem;
 	color: $color-primary;
 
-	// @media only screen and (max-width: $tab-port) {
-	// 	font-size: 1.4rem;
-	// 	line-height: 146%;
-	// }
-	// @media only screen and (max-width: $mbl-land) {
-	// 	font-size: 1.8rem;
-	// 	line-height: 150%;
-	// }
+	@media only screen and (max-width: $tab-port) {
+		font-size: 3.2rem;
+		line-height: 4.4rem;
+	}
+	@media only screen and (max-width: $mbl-land) {
+		font-size: 2.6rem;
+		line-height: 3.4rem;
+	}
 }
 
 .title {
 	h2 {
 		letter-spacing: 2rem;
 		font-family: $font-secondary;
+
+		@media only screen and (max-width: $tab-land) {
+			letter-spacing: 1.4rem;
+			margin-bottom: 1.5rem;
+		}
 	}
 
 	h6 {
@@ -43,6 +53,14 @@ h3.heading {
 		letter-spacing: 2rem;
 		color: $color-primary;
 		font-family: $font-primary;
+
+		@media only screen and (max-width: $tab-land) {
+			font-size: 1.2rem;
+			letter-spacing: 0.8rem;
+		}
+		@media only screen and (max-width: $mbl-small) {
+			line-height: 2.5rem;
+		}
 	}
 }
 h4 {
@@ -60,8 +78,8 @@ h5 {
 
 .text {
 	font-size: 2rem;
-	color: $color-black;
-	line-height: 4rem;
+	color: $color-white;
+	// line-height: 4rem;
 	font-weight: 200;
 	font-family: $font-primary;
 	text-transform: capitalize;

@@ -1,0 +1,32 @@
+.pillar-section {
+	padding: 8rem 0;
+}
+
+.pillar {
+	&__item {
+		border: 1px solid rgba(238, 238, 238, 0.188);
+		padding: 4.4rem 4.8rem;
+
+		@media only screen and (max-width: $mbl-land) {
+			text-align: center;
+		}
+	}
+	&__img {
+		height: 12rem;
+		width: 12rem;
+
+		@media only screen and (max-width: $mbl-land) {
+			margin: 0 auto;
+		}
+
+		img {
+			@include img-size;
+		}
+	}
+	&__title {
+		margin-bottom: 2.5rem;
+	}
+	&__desc {
+		font-weight: 200;
+	}
+}

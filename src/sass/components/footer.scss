@@ -1,22 +1,59 @@
 .footer {
-	padding: 4rem 0;
+	padding: 10rem 0;
 
-	.cards {
-		&__list {
-			gap: 0.8rem;
-		}
-		&__link {
-			background-color: #a2aeb8;
-			padding: 0.6rem 1.4rem;
-		}
-	}
-	.social {
-		.cards__link {
-			background-color: transparent;
-			padding: 0.5rem;
+	&__logo {
+		width: 26rem;
+		height: auto;
+
+		img {
+			@include img-size;
 		}
 	}
 
-	.social {
+	&__text {
+		font-size: 2rem;
+		font-weight: 300;
+		max-width: 70rem;
+		margin: 0 auto;
+
+		@media only screen and (max-width: $tab-land) {
+			font-size: 1.4rem;
+		}
+	}
+
+	&__list {
+		.social__list {
+			gap: 4rem;
+		}
+		.social__link {
+			.icon {
+				height: 3.6rem;
+				width: 2rem;
+				margin-right: 0;
+			}
+		}
+
+		.btn {
+			color: #ffffff;
+			border: 1px solid #ffffff7d;
+
+			&:hover {
+				color: $color-black;
+				background-color: $color-white;
+			}
+		}
+	}
+
+	&__btns {
+		gap: 4rem;
+		a:link,
+		a:visited {
+			color: #ffffff;
+			transition: all 0.3s;
+
+			&:hover {
+				color: #ffffff;
+			}
+		}
 	}
 }

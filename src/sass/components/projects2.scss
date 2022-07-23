@@ -3,16 +3,26 @@
 }
 
 .projects2 {
-	&__item {
-	}
-
 	&__img {
 		width: 100%;
 		height: auto;
-		// position: absolute;
+		overflow: hidden;
 
 		img {
 			@include img-size;
+			transition: all 0.5s;
+		}
+
+		&:hover {
+			img {
+				transform: scale(1.2);
+			}
+		}
+	}
+
+	&__item {
+		@media only screen and (max-width: $tab-land) {
+			width: 100%;
 		}
 	}
 
@@ -31,6 +41,13 @@
 	.details {
 		padding: 0 0 0 8rem;
 
+		@media only screen and (max-width: $tab-land) {
+			padding: 4rem;
+		}
+		@media only screen and (max-width: $mbl-land) {
+			padding: 2rem;
+		}
+
 		&__time {
 			// gap: 5rem;
 			.days {
@@ -43,6 +60,13 @@
 					font-size: 16.5rem;
 					color: $color-primary;
 					opacity: 0.2;
+
+					@media only screen and (max-width: $mbl-land) {
+						font-size: 11.5rem;
+					}
+					@media only screen and (max-width: $mbl-small) {
+						font-size: 8.5rem;
+					}
 				}
 
 				.title {
@@ -65,9 +89,16 @@
 
 		.title {
 			font-size: 5rem;
-			font-weight: 700;
+			font-weight: 400;
 			font-family: $font-secondary;
 			margin-bottom: 1.5rem;
+
+			@media only screen and (max-width: $tab-land) {
+				font-size: 4rem;
+			}
+			@media only screen and (max-width: $mbl-small) {
+				font-size: 2.5rem;
+			}
 		}
 
 		.text {
@@ -94,10 +125,19 @@
 				padding: 4rem 0;
 				border-top: 1px solid rgba(255, 255, 255, 0.526);
 				border-bottom: 1px solid rgba(255, 255, 255, 0.526);
+
+				@media only screen and (max-width: $mbl-land) {
+					grid-template-columns: repeat(2, 1fr);
+				}
 			}
 
 			&__img {
 				text-align: center;
+				// width: 100%;
+
+				// img {
+				// 	@include img-size;
+				// }
 			}
 			&__name {
 				font-size: 1.8rem;
@@ -109,6 +149,14 @@
 	}
 
 	.projects2__btns {
+		@media only screen and (max-width: $mbl-land) {
+			flex-direction: column;
+			gap: 2rem;
+
+			.line {
+				display: none;
+			}
+		}
 		.btn {
 			background-color: $color-white;
 			color: $color-black;

@@ -1,0 +1,27 @@
+.partnar-section {
+	padding: 8rem 0;
+
+	.partnar {
+		display: grid;
+		// grid-template-columns: repeat(5, 1fr);
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+		align-items: center;
+		// justify-content: center;
+		justify-items: center;
+		gap: 4;
+		border: 1px solid rgba(255, 255, 255, 0.286);
+		padding: 10rem 0;
+
+		// &__item {
+		// }
+
+		&__img {
+			height: 23rem;
+			width: 100%;
+
+			img {
+				@include img-size;
+			}
+		}
+	}
+}

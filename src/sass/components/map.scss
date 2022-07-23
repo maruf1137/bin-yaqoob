@@ -1,0 +1,70 @@
+.map-section {
+	height: 107rem;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+
+	.map__img {
+		height: 100%;
+		width: 100%;
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	.map {
+		text-align: center;
+
+		&__content {
+			margin-top: 10rem;
+			position: absolute;
+			top: 15rem;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+		}
+
+		&-btn {
+			background-color: transparent;
+			height: 8.6rem;
+			width: 8.6rem;
+
+			img {
+				@include img-size;
+			}
+		}
+
+		.contact {
+			border: 1px solid #ffffff56;
+			padding: 2rem;
+			max-width: 77rem;
+			width: 100%;
+			gap: 4rem;
+			margin: 0 auto;
+			position: absolute;
+			bottom: 15rem;
+			left: 50%;
+			transform: translateX(-50%);
+			justify-content: center;
+			border-radius: 0.5rem;
+
+			@media only screen and (max-width: $tab-land) {
+				flex-direction: column;
+				gap: 1.5rem;
+				width: 90%;
+
+				.line {
+					display: none;
+				}
+			}
+
+			.line {
+				height: 2rem;
+				width: 1px;
+				background-color: #ffffff5c;
+			}
+		}
+	}
+}

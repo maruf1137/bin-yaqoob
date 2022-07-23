@@ -19,9 +19,10 @@ html {
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 
-	// @media only screen and (max-width: $laptop-land) {
-	// 	font-size: 55%;
-	// }
+	@media only screen and (max-width: $laptop-land) {
+		font-size: 55%;
+	}
+
 	// @media only screen and (max-width: $mbl-land) {
 	// 	font-size: 50%;
 	// }
@@ -44,10 +45,10 @@ body {
 }
 
 .custom-container {
-	max-width: 120rem;
+	max-width: 152rem;
 	margin: 0 auto;
 
-	@media only screen and (max-width: $laptop-land) {
+	@media only screen and (max-width: 93.75em) {
 		padding: 0 2rem;
 	}
 }

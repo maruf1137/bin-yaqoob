@@ -68,6 +68,19 @@
 	}
 }
 
+.mbl-small-hide {
+	@media only screen and (max-width: $mbl-small) {
+		display: none !important;
+	}
+}
+.mbl-small-show {
+	display: none !important;
+
+	@media only screen and (max-width: $mbl-small) {
+		display: block !important;
+	}
+}
+
 .hide {
 	opacity: 0;
 	visibility: hidden;

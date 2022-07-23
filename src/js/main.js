@@ -1,21 +1,22 @@
-// const bars = document.querySelector('.mbl-bar');
-// const closeSidebar = document.querySelector('.close-mbl-sidebar');
-// const sidebar = document.querySelector('.mbl-sidebar');
+const btnOpen = document.querySelector('.btn-open-sidebar');
+const btnClose = document.querySelector('.btn-close-sidebar');
+const mblbar = document.querySelector('.mbl-bar');
 
-// bars.addEventListener('click', () => {
-// 	sidebar.classList.add('show-mbl-sidebar');
-// });
-// closeSidebar.addEventListener('click', () => {
-// 	sidebar.classList.remove('show-mbl-sidebar');
-// });
+btnOpen.addEventListener('click', () => {
+	mblbar.classList.add('show-mbl-bar');
+});
+btnClose.addEventListener('click', () => {
+	mblbar.classList.remove('show-mbl-bar');
+});
 
-// // dropdown
-// const dropdown = document.querySelector('.dropdown');
-// const dropbtn = document.querySelector('.dropdown__btn');
-
-// dropbtn.addEventListener('click', function () {
-// 	dropdown.classList.toggle('show-dropdown');
-// });
+// video
+const player = document.querySelector('.player');
+const video = player.querySelector('.viewer');
+function togglePlay() {
+	const method = video.paused ? 'play' : 'pause';
+	video[method]();
+}
+video.addEventListener('click', togglePlay);
 
 // sidebar
 const sidebarOpenbtn = document.querySelectorAll('.show-sidebar-btn');
@@ -62,7 +63,7 @@ option.forEach((a) => {
 const range = document.querySelectorAll('.range-slider span input');
 progress = document.querySelector('.range-slider .progress');
 let gap = 0.1;
-const inputValue = document.querySelectorAll('.numberVal input');
+const inputValue = document.querySelectorAll('.numberVal .input');
 
 range.forEach((input) => {
 	input.addEventListener('input', (e) => {
@@ -78,9 +79,9 @@ range.forEach((input) => {
 		} else {
 			progress.style.left = (minRange / range[0].max) * 100 + '%';
 			progress.style.right = 100 - (maxRange / range[1].max) * 100 + '%';
-			inputValue[0].value = minRange;
 
-			inputValue[1].value = maxRange;
+			inputValue[0].innerHTML = minRange;
+			inputValue[1].innerHTML = maxRange;
 		}
 	});
 });

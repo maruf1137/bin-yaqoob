@@ -18,6 +18,7 @@
 	</head>
 	<body>
 		<main>
+			<!-- navbar -->
 			<nav class="nav">
 				<div class="custom-container w-100 d-flex justify-content-between align-items-center">
 					<figure class="nav__logo">
@@ -63,11 +64,65 @@
 							</div>
 						</div>
 					</div>
+
+					<button class="btn-open-sidebar btn-sidebar">
+						<svg class="icon icon-bars"><use xlink:href="img/icons.svg#icon-bars"></use></svg>
+					</button>
+				</div>
+
+				<!-- mbl nav -->
+				<div class="mbl-bar position-relative">
+					<button class="btn-close-sidebar btn-sidebar">
+						<svg class="icon icon-bars"><use xlink:href="img/icons.svg#icon-clear"></use></svg>
+					</button>
+
+					<ul class="nav__list d-flex justify-content-center align-items-center flex-column mb-5">
+						<li class="nav__item">
+							<a class="nav__link active" href="#">home</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#">about us</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#">projects</a>
+						</li>
+						<li class="nav__item">
+							<a class="nav__link" href="#">Journal</a>
+						</li>
+					</ul>
+
+					<div class="nav__right d-flex justify-content-center align-items-center flex-column">
+						<div class="login">
+							<button class="btn btn-login">login</button>
+							<button class="btn btn-logout d-none">logout</button>
+						</div>
+						<!-- <div class="line"></div> -->
+						<div class="contact d-flex flex-column align-items-start">
+							<div class="number d-flex justify-content-center align-items-center">
+								<svg class="icon mr-1">
+									<use xlink:href="img/icons.svg#icon-Icon-awesome-phone-alt"></use>
+								</svg>
+								<a class="number1" href="tel:0512720699">0512720699</a>
+								<span class="mx-2">-</span>
+								<a class="number1" href="tel:0512720723">0512720723</a>
+							</div>
+
+							<div class="number d-flex justify-content-center align-items-center">
+								<svg class="icon mr-1">
+									<use xlink:href="img/icons.svg#icon-Icon-zocial-email"></use>
+								</svg>
+								<a class="number1" href="binyaqoobbuilders@gmail.com"
+									>binyaqoobbuilders@gmail.com</a
+								>
+							</div>
+						</div>
+					</div>
 				</div>
 			</nav>
 
+			<!-- header section -->
 			<div class="header d-flex align-items-stretch justify-content-between">
-				<div class="sidebar sidebar-left position-relative">
+				<div class="sidebar sidebar-left position-relative tablet-land-hide">
 					<div class="header__btn show-sidebar-btn btn-search">
 						<svg class="icon">
 							<use xlink:href="img/icons.svg#icon-Icon-ionic-ios-search"></use>
@@ -76,7 +131,7 @@
 					</div>
 
 					<div class="container-wrapper">
-						<div class="nav d-flex align-items-center justify-content-center mb-2">
+						<div class="sidebar-nav d-flex align-items-center justify-content-center mb-2">
 							<svg class="icon mr-1">
 								<use xlink:href="img/icons.svg#icon-Icon-ionic-ios-search"></use>
 							</svg>
@@ -129,12 +184,14 @@
 								<!-- price range -->
 								<h5 class="heading mb-1">Price Range</h5>
 								<div
-									class="flex relative justify-center items-center h-20 w-full mx-auto rounded mb-4"
+									class="flex relative justify-center items-center h-20 w-full mx-auto rounded mb-4 position-relative mb-8"
 								>
-									<div class="min-value numberVal d-none">
-										<input type="number" class="" min="0" max="100" value="25" disabled />
+									<div class="min-value numberVal d-flex align-items-center value">
+										<span>PKR</span>
+										<!-- <input type="number" min="0" max="100" value="25" disabled /> -->
+										<div class="input">20</div>
+										<span>lakh</span>
 									</div>
-									<!--   &nbsp; -->
 									<div class="range-slider">
 										<div class="progress"></div>
 										<span class="range-min-wrapper">
@@ -146,52 +203,86 @@
 											<!-- <span class="range-max-value">100</span> -->
 										</span>
 									</div>
-									<!--   &nbsp; -->
-									<div class="max-value numberVal d-none">
-										<input
-											type="number"
-											class="border text-center"
-											min="0"
-											max="100"
-											value="75"
-											disabled
-										/>
-									</div>
-								</div>
-
-								<h5 class="heading mb-1">Size (Sq.Ft)</h5>
-								<div
-									class="flex relative justify-center items-center h-20 w-full mx-auto rounded mb-4"
-								>
-									<div class="min-value numberVal d-none">
-										<input type="number" class="" min="0" max="100" value="25" disabled />
-									</div>
-									<!--   &nbsp; -->
-									<div class="range-slider">
-										<div class="progress"></div>
-										<span class="range-min-wrapper">
-											<input class="range-min" type="range" min="0" max="100" value="25" />
-											<!-- <span class="range-min-value">0</span> -->
-										</span>
-										<span class="range-max-wrapper">
-											<input class="range-max" type="range" min="0" max="100" value="100" />
-											<!-- <span class="range-max-value">100</span> -->
-										</span>
-									</div>
-									<!--   &nbsp; -->
-									<div class="max-value numberVal d-none">
-										<input
-											type="number"
-											class="border text-center"
-											min="0"
-											max="100"
-											value="75"
-											disabled
-										/>
+									<div class="max-value numberVal d-flex align-items-center value">
+										<span>PKR</span>
+										<!-- <input type="number" min="0" max="100" value="75" disabled /> -->
+										<div class="input">20</div>
+										<span>lakh</span>
 									</div>
 								</div>
 
 								<!-- size range -->
+								<h5 class="heading mb-1">Size (Sq.Ft)</h5>
+								<!-- <div
+									class="flex relative justify-center items-center h-20 w-full mx-auto rounded mb-4 position-relative mb-8"
+								>
+									<div class="min-value numberVal d-flex align-items-center value">
+										<span>Min</span>
+										<div class="input">200</div>
+									</div>
+									<div class="range-slider">
+										<div class="progress"></div>
+										<span class="range-min-wrapper">
+											<input class="range-min" type="range" min="0" max="100" value="25" />
+										</span>
+										<span class="range-max-wrapper">
+											<input class="range-max" type="range" min="0" max="100" value="100" />
+										</span>
+									</div>
+									<div class="max-value numberVal d-flex align-items-center value">
+										<span>Max</span>
+										<div class="input">15,000+</div>
+									</div>
+								</div> -->
+
+								<!-- <div slider id="slider-distance">
+									<div>
+										<div inverse-left style="width: 70%"></div>
+										<div inverse-right style="width: 70%"></div>
+										<div range style="left: 30%; right: 40%"></div>
+										<span thumb style="left: 30%"></span>
+										<span thumb style="left: 60%"></span>
+										<div sign style="left: 30%">
+											<span id="value">min 200</span>
+										</div>
+										<div sign style="left: 60%">
+											<span id="value">Max 15,000+</span>
+										</div>
+									</div>
+									<input
+										type="range"
+										tabindex="0"
+										value="30"
+										max="100"
+										min="0"
+										step="1"
+										oninput="
+  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+  var children = this.parentNode.childNodes[1].childNodes;
+  children[1].style.width=value+'%';
+  children[5].style.left=value+'%';
+  children[7].style.left=value+'%';children[11].style.left=value+'%';
+  children[11].childNodes[1].innerHTML=this.value;"
+									/>
+									<input
+										type="range"
+										tabindex="0"
+										value="60"
+										max="100"
+										min="0"
+										step="1"
+										oninput="
+  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+  var children = this.parentNode.childNodes[1].childNodes;
+  children[3].style.width=(100-value)+'%';
+  children[5].style.right=(100-value)+'%';
+  children[9].style.left=value+'%';children[13].style.left=value+'%';
+  children[13].childNodes[1].innerHTML=this.value;"
+									/>
+								</div> -->
+
 								<!-- bedrooms -->
 								<h5 class="heading mb-1">bedrooms</h5>
 								<div class="select white">
@@ -220,16 +311,16 @@
 
 				<div class="header__container header__video">
 					<div class="player">
-						<video autoplay class="player__video viewer" src="img/video/movie.mp4"></video>
+						<video class="player__video viewer" src="img/video/video-1.mp4" autoplay></video>
 					</div>
 				</div>
 
-				<div class="sidebar sidebar-right position-relative">
+				<div class="sidebar sidebar-right position-relative tablet-land-hide">
 					<div class="header__btn show-sidebar-btn btn-search">
 						<span>Schedule a Meeting</span>
 					</div>
 					<div class="container-wrapper">
-						<div class="nav d-flex mb-2">
+						<div class="sidebar-nav d-flex mb-2">
 							<h4 class="heading white center">ScHEdule a Meeting!</h4>
 						</div>
 						<!-- form -->
@@ -309,6 +400,7 @@
 				</div>
 			</div>
 
+			<!-- residence-section -->
 			<section class="residence-section">
 				<div class="custom-container center mb-4">
 					<div class="title">
@@ -316,8 +408,9 @@
 						<h6 class="heading uppercase">SALAM TOWER | FAISAL TOWN</h6>
 					</div>
 				</div>
+
 				<div class="custom-container">
-					<div class="residence">
+					<div class="residence tablet-land-hide">
 						<div class="residence__list row">
 							<div class="residence__item col-5 p-5">
 								<h3 class="heading mb-6">A luxury of living with our futuristic project.</h3>
@@ -414,26 +507,124 @@
 						</div>
 					</div>
 
-					<!-- <div class="residence row">
-						
-					</div> -->
+					<div class="residence tablet-land-show">
+						<div class="residence__list row d-none">
+							<!-- <div class="residence__item col-5 p-5">
+								<h3 class="heading mb-6">A luxury of living with our futuristic project.</h3>
+								<button class="btn btn-explore">explore</button>
+							</div> -->
+							<div class="residence__item col-6">
+								<figure class="residence__img">
+									<img src="img/sections/residence-img-1.jpg" alt="" />
+								</figure>
+							</div>
+							<div class="residence__item col-6">
+								<figure class="residence__img">
+									<img src="img/sections/residence-img-2.jpg" alt="" />
+								</figure>
+							</div>
+						</div>
+
+						<div class="residence__list row align-items-start">
+							<!-- accordion -->
+							<div class="residence__item col-12 px-5 mb-5">
+								<div class="container">
+									<section class="accordion-wrapper" data-accordion>
+										<details>
+											<summary>
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons.svg#icon-plus"></use>
+												</svg>
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons.svg#icon-minus"></use>
+												</svg>
+												Floor Plan
+											</summary>
+											<div class="details-info">
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis
+													sodales erat vel accumsan. Nam eget massa nec.
+												</p>
+											</div>
+										</details>
+										<details>
+											<summary>
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons.svg#icon-plus"></use>
+												</svg>
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons.svg#icon-minus"></use>
+												</svg>
+												360 View
+											</summary>
+											<div class="details-info">
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis
+													sodales erat vel accumsan. Nam eget massa nec sem vulputate.
+												</p>
+											</div>
+										</details>
+										<details>
+											<summary>
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons.svg#icon-plus"></use>
+												</svg>
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons.svg#icon-minus"></use>
+												</svg>
+												Price Structure
+											</summary>
+											<div class="details-info">
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis
+													sodales erat vel accumsan. Nam eget massa nec sem vulputate.
+												</p>
+											</div>
+										</details>
+										<details>
+											<summary>
+												<svg class="icon icon-plus">
+													<use xlink:href="img/icons.svg#icon-plus"></use>
+												</svg>
+												<svg class="icon icon-minus">
+													<use xlink:href="img/icons.svg#icon-minus"></use>
+												</svg>
+												Call our Agent
+											</summary>
+											<div class="details-info">
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis
+													sodales erat vel accumsan. Nam eget massa nec sem vulputate.
+												</p>
+											</div>
+										</details>
+									</section>
+								</div>
+							</div>
+
+							<div class="residence__item col-12 px-5 center">
+								<h3 class="heading mb-6">A luxury of living with our futuristic project.</h3>
+								<button class="btn btn-explore">explore</button>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div class="custom-container">
 					<div class="services row">
-						<div class="col-3 services__item">
+						<div class="col services__item">
 							<div class="point">516</div>
 							<div class="name">Resedential</div>
 						</div>
-						<div class="col-3 services__item">
+						<div class="col services__item">
 							<div class="point">02</div>
 							<div class="name">COMMERCIAL</div>
 						</div>
-						<div class="col-3 services__item">
+						<div class="col services__item">
 							<div class="point">12</div>
 							<div class="name">OFF PLAN</div>
 						</div>
-						<div class="col-3 services__item">
+						<div class="col services__item">
 							<div class="point">25</div>
 							<div class="name">LANDS</div>
 						</div>
@@ -441,19 +632,29 @@
 				</div>
 			</section>
 
+			<!-- projects-section -->
 			<section class="projects-section">
 				<div class="custom-container">
 					<div class="header d-flex justify-content-between align-items-center mb-3">
 						<h3 class="heading">Featured Projects</h3>
-						<div class="filter__btns">
+						<div class="filter__btns tablet-land-hide">
 							<button class="btn-filter active">RESIDENTIAL</button>
 							<button class="btn-filter">COMMERCIAL</button>
 							<button class="btn-filter">OFF PLAN</button>
 						</div>
+
+						<div class="select white tablet-land-show">
+							<div class="selectBtn" data-type="firstOption">RESIDENTIAL</div>
+							<div class="selectDropdown">
+								<div class="option" data-type="firstOption">RESIDENTIAL</div>
+								<div class="option" data-type="secondOption">COMMERCIAL</div>
+								<div class="option" data-type="thirdOption">OFF PLAN</div>
+							</div>
+						</div>
 					</div>
 
 					<div class="projects row gx-5">
-						<div class="col-4">
+						<div class="col">
 							<div class="projects__item p-2">
 								<figure class="projects__img mb-2">
 									<img src="img/sections/project-img-1.png" alt="project 1" />
@@ -462,12 +663,23 @@
 									<div class="subtitle mb-1">Residential</div>
 									<h3 class="heading mb-1">salam tower apartments</h3>
 
-									<div class="address-wrapper d-flex justify-content-start align-items-center">
+									<div
+										class="address-wrapper d-flex justify-content-start align-items-center mbl-small-hide"
+									>
 										<div>
 											<div class="address">Faisal Town, Islamabad</div>
 											<div class="price">PKR 8,995,000</div>
 										</div>
 										<div class="line"></div>
+										<button class="btn btn-buy">buy</button>
+									</div>
+
+									<div
+										class="address-wrapper d-flex flex-column justify-content-start align-items-center mbl-small-show"
+									>
+										<div class="address mb-1">Faisal Town, Islamabad</div>
+										<div class="price mb-1">PKR 8,995,000</div>
+
 										<button class="btn btn-buy">buy</button>
 									</div>
 
@@ -495,7 +707,7 @@
 							</div>
 						</div>
 
-						<div class="col-4">
+						<div class="col">
 							<div class="projects__item p-2">
 								<figure class="projects__img mb-2">
 									<img src="img/sections/project-img-2.png" alt="project 1" />
@@ -504,12 +716,23 @@
 									<div class="subtitle mb-1">Residential</div>
 									<h3 class="heading mb-1">salam tower apartments</h3>
 
-									<div class="address-wrapper d-flex justify-content-start align-items-center">
+									<div
+										class="address-wrapper d-flex justify-content-start align-items-center mbl-small-hide"
+									>
 										<div>
 											<div class="address">Faisal Town, Islamabad</div>
 											<div class="price">PKR 8,995,000</div>
 										</div>
 										<div class="line"></div>
+										<button class="btn btn-buy">buy</button>
+									</div>
+
+									<div
+										class="address-wrapper d-flex flex-column justify-content-start align-items-center mbl-small-show"
+									>
+										<div class="address mb-1">Faisal Town, Islamabad</div>
+										<div class="price mb-1">PKR 8,995,000</div>
+
 										<button class="btn btn-buy">buy</button>
 									</div>
 
@@ -537,7 +760,7 @@
 							</div>
 						</div>
 
-						<div class="col-4">
+						<div class="col">
 							<div class="projects__item p-2">
 								<figure class="projects__img mb-2">
 									<img src="img/sections/project-img-3.png" alt="project 1" />
@@ -546,12 +769,23 @@
 									<div class="subtitle mb-1">Residential</div>
 									<h3 class="heading mb-1">salam tower apartments</h3>
 
-									<div class="address-wrapper d-flex justify-content-start align-items-center">
+									<div
+										class="address-wrapper d-flex justify-content-start align-items-center mbl-small-hide"
+									>
 										<div>
 											<div class="address">Faisal Town, Islamabad</div>
 											<div class="price">PKR 8,995,000</div>
 										</div>
 										<div class="line"></div>
+										<button class="btn btn-buy">buy</button>
+									</div>
+
+									<div
+										class="address-wrapper d-flex flex-column justify-content-start align-items-center mbl-small-show"
+									>
+										<div class="address mb-1">Faisal Town, Islamabad</div>
+										<div class="price mb-1">PKR 8,995,000</div>
+
 										<button class="btn btn-buy">buy</button>
 									</div>
 
@@ -590,9 +824,10 @@
 				</div>
 			</section>
 
+			<!-- projects2-section -->
 			<section class="projects-section2">
 				<div class="custom-container">
-					<div class="title center mb-4">
+					<div class="title center mb-5">
 						<h2 class="heading">Approaching Projects</h2>
 						<h6 class="heading uppercase">IMMINENT LUXURY TO YOU</h6>
 					</div>
@@ -600,7 +835,7 @@
 
 				<div class="custom-container">
 					<div class="projects2 row align-items-center">
-						<div class="col-6 projects2__item position-relative">
+						<div class="col-6 projects2__item position-relative tablet-land-hide">
 							<figure class="projects2__img">
 								<img src="img/sections/projects2-img.png" alt="" />
 							</figure>
@@ -611,6 +846,7 @@
 								</svg> -->
 							</button>
 						</div>
+
 						<div class="col-6 projects2__item">
 							<div class="details">
 								<div class="details__time d-flex justify-content-between align-items-center mb-3">
@@ -686,16 +922,499 @@
 					</div>
 				</div>
 			</section>
+
+			<!-- pillar-section -->
+			<section class="pillar-section">
+				<div class="custom-container">
+					<div class="title center mb-5">
+						<h2 class="heading">Our Four Pillars</h2>
+						<p class="text white">
+							At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+							voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+							occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
+							mollitia
+						</p>
+					</div>
+				</div>
+
+				<div class="custom-container">
+					<div class="pillar row g-4">
+						<div class="col-12 col-sm-6 col-xl-3">
+							<div class="pillar__item">
+								<figure class="pillar__img mb-4">
+									<img src="img/sections/pillar-img-1.png" alt="pillar img 1" />
+								</figure>
+								<h4 class="heading pillar__title">Honesty</h4>
+								<p class="text pillar__desc">
+									At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+									praesentium
+								</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-xl-3">
+							<div class="pillar__item">
+								<figure class="pillar__img mb-4">
+									<img src="img/sections/pillar-img-2.png" alt="pillar img 2" />
+								</figure>
+								<h4 class="heading pillar__title">Honesty</h4>
+								<p class="text pillar__desc">
+									At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+									praesentium
+								</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-xl-3">
+							<div class="pillar__item">
+								<figure class="pillar__img mb-4">
+									<img src="img/sections/pillar-img-3.png" alt="pillar img 1" />
+								</figure>
+								<h4 class="heading pillar__title">Commitment</h4>
+								<p class="text pillar__desc">
+									At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+									praesentium
+								</p>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-xl-3">
+							<div class="pillar__item">
+								<figure class="pillar__img mb-4">
+									<img src="img/sections/pillar-img-4.png" alt="pillar img 1" />
+								</figure>
+								<h4 class="heading pillar__title">Improvement</h4>
+								<p class="text pillar__desc">
+									At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+									praesentium
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- acquire-section -->
+			<section class="acquire-section">
+				<div class="custom-container">
+					<div class="acquire">
+						<div class="acquire__title mb-6">
+							Acquiring the land with the vision of unfolding the Amenities and Luxuries at your
+							doorstep. We Bring You Standard, not just bricks and paints.
+						</div>
+						<div class="line mb-8"></div>
+						<div class="acquire__btns d-flex flex-column justify-content-center align-items-center">
+							<button class="btn btn-acquire">Acquire Land</button>
+							<button class="btn btn-explore">Expert Assistance</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- realestate-section -->
+			<section class="realestate-section">
+				<div class="custom-container">
+					<div class="realestate d-flex justify-content-between align-items-stretch">
+						<div class="realestate__content">
+							<h2 class="heading uppercase mb-4">Real Estate Experts</h2>
+							<p class="text mb-4">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+								incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+								exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+								irure dolor in
+							</p>
+							<button class="btn btn-agent uppercase">Find an Agent</button>
+						</div>
+						<figure class="realestate__img tablet-land-hide">
+							<img src="img/realestate-ing.png" alt="" />
+						</figure>
+					</div>
+				</div>
+			</section>
+
+			<!-- partnar-section -->
+			<section class="partnar-section">
+				<div class="custom-container">
+					<div class="partnar">
+						<div class="partnar__item">
+							<figure class="partnar__img">
+								<img src="img/sections/partnar-img-1.png" alt="" />
+							</figure>
+						</div>
+						<div class="partnar__item">
+							<figure class="partnar__img">
+								<img src="img/sections/partnar-img-2.png" alt="" />
+							</figure>
+						</div>
+						<div class="partnar__item">
+							<figure class="partnar__img">
+								<img src="img/sections/partnar-img-3.png" alt="" />
+							</figure>
+						</div>
+						<div class="partnar__item">
+							<figure class="partnar__img">
+								<img src="img/sections/partnar-img-4.png" alt="" />
+							</figure>
+						</div>
+						<div class="partnar__item">
+							<figure class="partnar__img">
+								<img src="img/sections/partnar-img-5.png" alt="" />
+							</figure>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- contact-section -->
+			<section class="contact-section">
+				<div class="custom-container">
+					<div class="row tablet-land-hide">
+						<div class="visit col-4">
+							<h4 class="heading visit__title uppercase mb-4">Request a Visit</h4>
+							<form action="#" class="visit__form mb-5">
+								<div class="visit__name visit__item mb-2">
+									<svg class="icon">
+										<use xlink:href="img/icons.svg#icon-Icon-awesome-user-alt"></use>
+									</svg>
+									<input type="text" placeholder="full name" class="input name-input" />
+								</div>
+
+								<div class="visit__email visit__item mb-2">
+									<svg class="icon">
+										<use xlink:href="img/icons.svg#icon-Icon-material-email"></use>
+									</svg>
+									<input type="text" placeholder="email address" class="input email-input" />
+								</div>
+								<div class="visit__phone visit__item mb-2">
+									<svg class="icon">
+										<use xlink:href="img/icons.svg#icon-Icon-ionic-ios-call"></use>
+									</svg>
+									<input type="text" placeholder="phone number" class="input phone-input" />
+								</div>
+
+								<div class="visit__adress visit__item mb-2">
+									<svg class="icon">
+										<use xlink:href="img/icons.svg#icon-Icon-material-my-location"></use>
+									</svg>
+									<input type="text" placeholder="location" class="input adress-input" />
+								</div>
+
+								<div class="visit__question visit__item mb-2">
+									<svg class="icon">
+										<use xlink:href="img/icons.svg#icon-Icon-awesome-question"></use>
+									</svg>
+									<input type="text" placeholder="your question..." class="input question-input" />
+								</div>
+
+								<div class="visit__submit">
+									<button class="btn btn-submit">submit</button>
+								</div>
+							</form>
+							<div class="visit__social d-flex justify-content-center align-items-center">
+								<a href="#" class="visit__social--item">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-facebook"></use></svg>
+								</a>
+								<a href="#" class="visit__social--item">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-instagram"></use></svg>
+								</a>
+								<a href="#" class="visit__social--item">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-twitter"></use></svg>
+								</a>
+								<a href="#" class="visit__social--item">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-linkedin2"></use></svg>
+								</a>
+							</div>
+						</div>
+						<div class="journal col-8">
+							<h4 class="heading journal__title mb-2">journal</h4>
+							<div class="journal__list d-flex justify-content-between align-items-stretch">
+								<div class="journal__item position-relative">
+									<figure class="journal__img">
+										<img src="img/sections/journal-img-1.png" alt="" />
+									</figure>
+									<div class="journal__content">
+										<div class="journal__news mb-3">news</div>
+										<p class="text journal__text mb-5">
+											Building a custom home? Consult this step-by-step checklist first
+										</p>
+										<div class="journal__date"><span>02</span> jan</div>
+									</div>
+								</div>
+								<div class="journal__item position-relative">
+									<figure class="journal__img">
+										<img src="img/sections/journal-img-2.png" alt="" />
+									</figure>
+									<div class="journal__content">
+										<div class="journal__news mb-3">news</div>
+										<p class="text journal__text mb-5">
+											Building a custom home? Consult this step-by-step checklist first
+										</p>
+										<div class="journal__date"><span>07</span> jan</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="journal__btn center">
+								<button class="btn btn-explore mt-5">explore</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="row tablet-land-show">
+						<div class="journal col-12">
+							<h4 class="heading journal__title mb-2">journal</h4>
+							<div class="journal__list d-flex justify-content-between align-items-stretch">
+								<div class="journal__item position-relative">
+									<figure class="journal__img">
+										<img src="img/sections/journal-img-1.png" alt="" />
+									</figure>
+									<div class="journal__content">
+										<div class="journal__news mb-3">news</div>
+										<p class="text journal__text mb-5">
+											Building a custom home? Consult this step-by-step checklist first
+										</p>
+										<div class="journal__date"><span>02</span> jan</div>
+									</div>
+								</div>
+								<div class="journal__item position-relative">
+									<figure class="journal__img">
+										<img src="img/sections/journal-img-2.png" alt="" />
+									</figure>
+									<div class="journal__content">
+										<div class="journal__news mb-3">news</div>
+										<p class="text journal__text mb-5">
+											Building a custom home? Consult this step-by-step checklist first
+										</p>
+										<div class="journal__date"><span>07</span> jan</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="journal__btn center">
+								<button class="btn btn-explore mt-5">explore</button>
+							</div>
+						</div>
+
+						<div class="visit col-12">
+							<h4 class="heading visit__title uppercase mb-4">Request a Visit</h4>
+							<form action="#" class="visit__form mb-5">
+								<div class="visit__name visit__item mb-2">
+									<svg class="icon">
+										<use xlink:href="img/icons.svg#icon-Icon-awesome-user-alt"></use>
+									</svg>
+									<input type="text" placeholder="full name" class="input name-input" />
+								</div>
+
+								<div class="visit__email visit__item mb-2">
+									<svg class="icon">
+										<use xlink:href="img/icons.svg#icon-Icon-material-email"></use>
+									</svg>
+									<input type="text" placeholder="email address" class="input email-input" />
+								</div>
+								<div class="visit__phone visit__item mb-2">
+									<svg class="icon">
+										<use xlink:href="img/icons.svg#icon-Icon-ionic-ios-call"></use>
+									</svg>
+									<input type="text" placeholder="phone number" class="input phone-input" />
+								</div>
+
+								<div class="visit__adress visit__item mb-2">
+									<svg class="icon">
+										<use xlink:href="img/icons.svg#icon-Icon-material-my-location"></use>
+									</svg>
+									<input type="text" placeholder="location" class="input adress-input" />
+								</div>
+
+								<div class="visit__question visit__item mb-2">
+									<svg class="icon">
+										<use xlink:href="img/icons.svg#icon-Icon-awesome-question"></use>
+									</svg>
+									<input type="text" placeholder="your question..." class="input question-input" />
+								</div>
+
+								<div class="visit__submit">
+									<button class="btn btn-submit">submit</button>
+								</div>
+							</form>
+							<div class="visit__social d-flex justify-content-center align-items-center">
+								<a href="#" class="visit__social--item">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-facebook"></use></svg>
+								</a>
+								<a href="#" class="visit__social--item">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-instagram"></use></svg>
+								</a>
+								<a href="#" class="visit__social--item">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-twitter"></use></svg>
+								</a>
+								<a href="#" class="visit__social--item">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-linkedin2"></use></svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- map-section -->
+			<section class="map-section">
+				<figure class="map__img">
+					<img src="img/map.png" alt="" />
+				</figure>
+				<div class="map">
+					<div class="map__content">
+						<button class="map-btn mb-4">
+							<img src="img/map-btn.png" alt="" />
+						</button>
+						<h3 class="heading map__name">Bin Yaqoob Builders</h3>
+					</div>
+					<div class="contact d-flex align-items-center">
+						<div class="number d-flex justify-content-center align-items-center">
+							<svg class="icon mr-1">
+								<use xlink:href="img/icons.svg#icon-Icon-awesome-phone-alt"></use>
+							</svg>
+							<a class="number1" href="tel:0512720699">0512720699</a>
+							<span class="mx-2">-</span>
+							<a class="number1" href="tel:0512720723">0512720723</a>
+						</div>
+
+						<div class="line"></div>
+
+						<div class="email d-flex justify-content-center align-items-center">
+							<svg class="icon mr-1">
+								<use xlink:href="img/icons.svg#icon-Icon-zocial-email"></use>
+							</svg>
+							<a class="number1" href="binyaqoobbuilders@gmail.com">binyaqoobbuilders@gmail.com</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- gallery section -->
+			<section class="gallery-section">
+				<div class="gallery">
+					<div class="gallery__item gallery__item--1">
+						<figure class="gallery__img">
+							<img src="img/sections/gallery-img-1.jpg" alt="" />
+						</figure>
+					</div>
+					<div class="gallery__item gallery__item--2">
+						<figure class="gallery__img">
+							<img src="img/sections/gallery-img-2.jpg" alt="" />
+						</figure>
+					</div>
+					<div class="gallery__item gallery__item--3">
+						<figure class="gallery__img">
+							<img src="img/sections/gallery-img-3.jpg" alt="" />
+						</figure>
+					</div>
+					<div class="gallery__item gallery__item--4">
+						<figure class="gallery__img">
+							<img src="img/sections/gallery-img-4.jpg" alt="" />
+						</figure>
+					</div>
+					<div class="gallery__item gallery__item--5">
+						<figure class="gallery__img">
+							<img src="img/sections/gallery-img-5.jpg" alt="" />
+						</figure>
+					</div>
+					<div class="gallery__item gallery__item--6">
+						<figure class="gallery__img">
+							<img src="img/sections/gallery-img-6.jpg" alt="" />
+						</figure>
+					</div>
+					<div class="gallery__item gallery__item--7">
+						<figure class="gallery__img">
+							<img src="img/sections/gallery-img-7.jpg" alt="" />
+						</figure>
+					</div>
+				</div>
+			</section>
+
+			<!-- footer-section -->
+			<footer class="footer">
+				<div class="custom-container center">
+					<div class="footer__logo mb-5 mx-auto">
+						<img src="img/logo.png" alt="logo" />
+					</div>
+					<p class="text footer__text mb-6">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+						exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+
+					<div
+						class="footer__list mb-5 d-flex justify-content-between align-items-center mbl-land-hide"
+					>
+						<ul class="social__list d-flex justify-content-center align-items-center">
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-facebook"></use></svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-instagram"></use></svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-twitter"></use></svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-linkedin2"></use></svg>
+								</a>
+							</li>
+						</ul>
+						<button class="btn btn-about">about me</button>
+						<div class="footer__btns d-flex justify-content-center align-items-center">
+							<a href="#" class="footer__link">privacy</a>
+							<a href="#" class="footer__link">Terms & Conditions</a>
+						</div>
+					</div>
+					<div
+						class="footer__list mb-5 d-flex justify-content-between align-items-center mbl-land-show flex-column"
+					>
+						<ul class="social__list d-flex justify-content-center align-items-center mb-2">
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-facebook"></use></svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-instagram"></use></svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-twitter"></use></svg>
+								</a>
+							</li>
+							<li class="social__item">
+								<a href="#" class="social__link">
+									<svg class="icon"><use xlink:href="img/icons.svg#icon-linkedin2"></use></svg>
+								</a>
+							</li>
+						</ul>
+
+						<div class="footer__btns d-flex justify-content-center align-items-center mb-3">
+							<a href="#" class="footer__link">privacy</a>
+							<a href="#" class="footer__link">Terms & Conditions</a>
+						</div>
+						<button class="btn btn-about">about me</button>
+					</div>
+
+					<div class="footer__copyright center">
+						<p class="text">Copyright © 2022 Bin Yaqoob Builders</p>
+					</div>
+				</div>
+			</footer>
 		</main>
 
-		<!-- JavaScript Bundle with Popper -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
 			crossorigin="anonymous"
 		></script>
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script> -->
 		<script src="js/main.js"></script>
 	</body>
 </html>
